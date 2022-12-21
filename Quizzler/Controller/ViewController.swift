@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     var questionNumber = 0
     let totalQuestions = questions.count
+    var correctAnswers = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
 
         if sender.currentTitle! == questions[questionNumber].correctAnswer { // checking answer
             questionText.text = "CORRECT!"
+            correctAnswers += 1
         } else {
             questionText.text = "WRONG!"
         }
@@ -36,7 +38,9 @@ class ViewController: UIViewController {
             if self.questionNumber < self.totalQuestions  {
                 self.updateUI(qNum: self.questionNumber)
             } else {
+                self.performSegue(withIdentifier: "ResultScreen", sender: self)
                 self.questionNumber = 0
+                self.correctAnswers = 0
                 self.updateUI(qNum: self.questionNumber)
             }
         }
@@ -49,6 +53,13 @@ class ViewController: UIViewController {
         middleButton.setTitle(questions[qNum].answers[1], for: .normal)
         bottomButton.setTitle(questions[qNum].answers[2], for: .normal)
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultScreen" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.correctAnswers = correctAnswers
+            destinationVC.totalQuestions = totalQuestions
+        }
     }
 }
 

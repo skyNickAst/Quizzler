@@ -29,9 +29,8 @@
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="jQI-rD-IJN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="A good question..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="jQI-rD-IJN">
                                         <rect key="frame" x="0.0" y="30" width="390" height="498"/>
-                                        <string key="text">A person is considered to have long Covid — sometimes called Post-Acute Sequelae of SARS-CoV-2 Infection (PASC) or Post Covid-19 Condition (PCC) — if 12 weeks after being infected they continue to have symptoms or develop new symptoms that can’t be explained by an alternative diagnosis. Long Covid is a term that covers multiple symptoms, conditions, and complications thought to occur after or because of a Covid infection.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -63,7 +62,7 @@
                                                         <rect key="frame" x="10" y="5" width="370" height="78.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Button donald trump america">
+                                                        <state key="normal" title="Answer 1">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -92,7 +91,7 @@
                                                         <rect key="frame" x="10" y="5" width="370" height="78.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Button donald trump america">
+                                                        <state key="normal" title="Answer 2">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -121,7 +120,7 @@
                                                         <rect key="frame" x="10" y="5" width="370" height="78.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Button donald trump america">
+                                                        <state key="normal" title="Answer 3">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -174,16 +173,99 @@
                         <outlet property="questionNumLabel" destination="h1T-om-WPi" id="Rwa-yc-RjJ"/>
                         <outlet property="questionText" destination="jQI-rD-IJN" id="Aod-2C-B9Q"/>
                         <outlet property="topButton" destination="B2m-U7-OLZ" id="Z1m-cd-jrP"/>
+                        <segue destination="qJo-dU-Qry" kind="presentation" identifier="ResultScreen" id="SGt-3i-xkp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129.76744186046511" y="-27.682403433476395"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="xdB-xd-qOT">
+            <objects>
+                <viewController id="qJo-dU-Qry" customClass="ResultViewController" customModule="Quizzler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0h1-WX-SAp">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="8oB-Mf-a6d">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="U4y-Bo-1Yx">
+                                <rect key="frame" x="20" y="59" width="390" height="804"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGp-Xc-2eE" userLabel="Score">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="401"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 out of 10 answers are correct!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugN-TT-jei">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="401"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ugN-TT-jei" firstAttribute="top" secondItem="nGp-Xc-2eE" secondAttribute="top" id="3f7-hH-wVL"/>
+                                            <constraint firstAttribute="bottom" secondItem="ugN-TT-jei" secondAttribute="bottom" id="75B-5Q-LLi"/>
+                                            <constraint firstAttribute="trailing" secondItem="ugN-TT-jei" secondAttribute="trailing" id="7XP-K9-VHd"/>
+                                            <constraint firstItem="ugN-TT-jei" firstAttribute="leading" secondItem="nGp-Xc-2eE" secondAttribute="leading" id="SB0-Rr-yJr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJa-6U-gib" userLabel="Try Again Button">
+                                        <rect key="frame" x="0.0" y="403" width="390" height="401"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4B-Fc-rSs">
+                                                <rect key="frame" x="95" y="210.66666666666663" width="200" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="IYc-N6-Xti"/>
+                                                    <constraint firstAttribute="height" constant="80" id="ZQT-cU-gSN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Try Again"/>
+                                                <connections>
+                                                    <action selector="tryAgainButtonPressed:" destination="qJo-dU-Qry" eventType="touchUpInside" id="ULg-nX-myy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="V4B-Fc-rSs" firstAttribute="centerY" secondItem="nJa-6U-gib" secondAttribute="centerY" constant="50" id="MdO-nv-P3S"/>
+                                            <constraint firstItem="V4B-Fc-rSs" firstAttribute="centerX" secondItem="nJa-6U-gib" secondAttribute="centerX" id="ZhX-tq-d1o"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SKj-Y2-zIV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U4y-Bo-1Yx" firstAttribute="top" secondItem="0h1-WX-SAp" secondAttribute="topMargin" id="2fA-R7-I8j"/>
+                            <constraint firstItem="8oB-Mf-a6d" firstAttribute="top" secondItem="0h1-WX-SAp" secondAttribute="top" id="Glo-Zk-HRL"/>
+                            <constraint firstItem="U4y-Bo-1Yx" firstAttribute="leading" secondItem="0h1-WX-SAp" secondAttribute="leadingMargin" id="iD1-zI-1Pk"/>
+                            <constraint firstAttribute="trailing" secondItem="8oB-Mf-a6d" secondAttribute="trailing" id="nRi-3U-l1g"/>
+                            <constraint firstItem="8oB-Mf-a6d" firstAttribute="leading" secondItem="0h1-WX-SAp" secondAttribute="leading" id="qvE-bD-A3h"/>
+                            <constraint firstAttribute="bottom" secondItem="8oB-Mf-a6d" secondAttribute="bottom" id="ya4-bL-xs7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="U4y-Bo-1Yx" secondAttribute="bottom" id="zT2-dQ-Tjd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U4y-Bo-1Yx" secondAttribute="trailing" id="zXx-GZ-nej"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultMessage" destination="ugN-TT-jei" id="edc-gO-74W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bzl-kn-zxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951.62790697674416" y="-27.682403433476395"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="888.66668701171875" height="1333.3333740234375"/>
         <image name="Button" width="640" height="320"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
