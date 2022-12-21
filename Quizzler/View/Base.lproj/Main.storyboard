@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quizzler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="VsW-Ta-Lbn">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yne-CA-klN" userLabel="1">
+                                <rect key="frame" x="20" y="59" width="390" height="558"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="h1T-om-WPi">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="jQI-rD-IJN">
+                                        <rect key="frame" x="0.0" y="30" width="390" height="498"/>
+                                        <string key="text">A person is considered to have long Covid — sometimes called Post-Acute Sequelae of SARS-CoV-2 Infection (PASC) or Post Covid-19 Condition (PCC) — if 12 weeks after being infected they continue to have symptoms or develop new symptoms that can’t be explained by an alternative diagnosis. Long Covid is a term that covers multiple symptoms, conditions, and complications thought to occur after or because of a Covid infection.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="h1T-om-WPi" secondAttribute="trailing" id="EkK-EG-Bxf"/>
+                                    <constraint firstAttribute="trailing" secondItem="jQI-rD-IJN" secondAttribute="trailing" id="ILq-H2-Khb"/>
+                                    <constraint firstItem="h1T-om-WPi" firstAttribute="top" secondItem="yne-CA-klN" secondAttribute="top" id="Iwe-jL-Rwd"/>
+                                    <constraint firstItem="h1T-om-WPi" firstAttribute="leading" secondItem="yne-CA-klN" secondAttribute="leading" id="JBs-Sw-Zjp"/>
+                                    <constraint firstItem="jQI-rD-IJN" firstAttribute="leading" secondItem="yne-CA-klN" secondAttribute="leading" id="YKn-jT-TJ6"/>
+                                    <constraint firstItem="jQI-rD-IJN" firstAttribute="top" secondItem="h1T-om-WPi" secondAttribute="bottom" id="cwl-vc-aDh"/>
+                                    <constraint firstAttribute="bottom" secondItem="jQI-rD-IJN" secondAttribute="bottom" constant="30" id="wdP-U5-R3p"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xae-GV-67U" userLabel="2">
+                                <rect key="frame" x="20" y="617" width="390" height="281"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5QD-Um-9FT">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="281"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hx-nj-vl2" userLabel="Top">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="88.333333333333329"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button" translatesAutoresizingMaskIntoConstraints="NO" id="Kla-4j-trQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="88.333333333333329"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2m-U7-OLZ">
+                                                        <rect key="frame" x="10" y="5" width="370" height="78.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Button donald trump america">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D1K-RK-uK0"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="B2m-U7-OLZ" firstAttribute="top" secondItem="9Hx-nj-vl2" secondAttribute="top" constant="5" id="6np-bU-IXQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Kla-4j-trQ" secondAttribute="trailing" id="7gl-R1-Qge"/>
+                                                    <constraint firstAttribute="bottom" secondItem="B2m-U7-OLZ" secondAttribute="bottom" constant="5" id="9OO-6F-GbI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="B2m-U7-OLZ" secondAttribute="trailing" constant="10" id="AJM-9C-ME0"/>
+                                                    <constraint firstItem="Kla-4j-trQ" firstAttribute="leading" secondItem="9Hx-nj-vl2" secondAttribute="leading" id="I63-y1-UlU"/>
+                                                    <constraint firstItem="Kla-4j-trQ" firstAttribute="top" secondItem="9Hx-nj-vl2" secondAttribute="top" id="N4n-qf-Dmg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Kla-4j-trQ" secondAttribute="bottom" id="prP-DU-X8z"/>
+                                                    <constraint firstItem="B2m-U7-OLZ" firstAttribute="leading" secondItem="9Hx-nj-vl2" secondAttribute="leading" constant="10" id="uvk-9V-cYj"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5P-Vt-axP" userLabel="Middle">
+                                                <rect key="frame" x="0.0" y="96.333333333333371" width="390" height="88.333333333333314"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button" translatesAutoresizingMaskIntoConstraints="NO" id="xsq-eR-Gev">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="88.333333333333329"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeM-FA-cDc">
+                                                        <rect key="frame" x="10" y="5" width="370" height="78.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Button donald trump america">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JgS-Jr-RbH"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="xsq-eR-Gev" firstAttribute="top" secondItem="R5P-Vt-axP" secondAttribute="top" id="4lk-02-21K"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xsq-eR-Gev" secondAttribute="trailing" id="5s7-4o-QGP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="QeM-FA-cDc" secondAttribute="bottom" constant="5" id="DDn-Ro-wqy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xsq-eR-Gev" secondAttribute="bottom" id="Yxa-Fk-ML7"/>
+                                                    <constraint firstItem="xsq-eR-Gev" firstAttribute="leading" secondItem="R5P-Vt-axP" secondAttribute="leading" id="gwd-NW-wYO"/>
+                                                    <constraint firstItem="QeM-FA-cDc" firstAttribute="top" secondItem="R5P-Vt-axP" secondAttribute="top" constant="5" id="kbM-cn-XgY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QeM-FA-cDc" secondAttribute="trailing" constant="10" id="qeW-3t-MJ9"/>
+                                                    <constraint firstItem="QeM-FA-cDc" firstAttribute="leading" secondItem="R5P-Vt-axP" secondAttribute="leading" constant="10" id="zOU-wB-drH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoW-a2-er6" userLabel="Bottom">
+                                                <rect key="frame" x="0.0" y="192.66666666666663" width="390" height="88.333333333333314"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-1Z-rqN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="88.333333333333329"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r2-j4-lZy">
+                                                        <rect key="frame" x="10" y="5" width="370" height="78.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Button donald trump america">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNz-EQ-uIi"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="2r2-j4-lZy" firstAttribute="top" secondItem="hoW-a2-er6" secondAttribute="top" constant="5" id="Gfa-0J-mp6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bBc-1Z-rqN" secondAttribute="bottom" id="IDj-li-oEv"/>
+                                                    <constraint firstItem="bBc-1Z-rqN" firstAttribute="top" secondItem="hoW-a2-er6" secondAttribute="top" id="dEc-oN-f2f"/>
+                                                    <constraint firstItem="bBc-1Z-rqN" firstAttribute="leading" secondItem="hoW-a2-er6" secondAttribute="leading" id="gzj-sK-865"/>
+                                                    <constraint firstItem="2r2-j4-lZy" firstAttribute="leading" secondItem="hoW-a2-er6" secondAttribute="leading" constant="10" id="mDu-yq-o8s"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bBc-1Z-rqN" secondAttribute="trailing" id="oIl-uB-FlF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2r2-j4-lZy" secondAttribute="bottom" constant="5" id="qMD-ow-5wu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2r2-j4-lZy" secondAttribute="trailing" constant="10" id="ukB-Kw-QMd"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5QD-Um-9FT" secondAttribute="trailing" id="Wyc-Ut-cnv"/>
+                                    <constraint firstAttribute="bottom" secondItem="5QD-Um-9FT" secondAttribute="bottom" id="bqb-L9-BVa"/>
+                                    <constraint firstItem="5QD-Um-9FT" firstAttribute="top" secondItem="Xae-GV-67U" secondAttribute="top" id="cKV-tC-g1b"/>
+                                    <constraint firstItem="5QD-Um-9FT" firstAttribute="leading" secondItem="Xae-GV-67U" secondAttribute="leading" id="yKx-1c-p05"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="Xae-GV-67U" secondAttribute="bottom" id="EiQ-l6-a2S"/>
+                            <constraint firstItem="VsW-Ta-Lbn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KyQ-VC-OYD"/>
+                            <constraint firstItem="yne-CA-klN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LaL-jn-Qzl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yne-CA-klN" secondAttribute="trailing" id="T22-6w-hQ5"/>
+                            <constraint firstItem="yne-CA-klN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="VgY-9b-Rvk"/>
+                            <constraint firstItem="Xae-GV-67U" firstAttribute="height" secondItem="yne-CA-klN" secondAttribute="height" multiplier="1:2" constant="2" id="kKv-KH-l25"/>
+                            <constraint firstAttribute="trailing" secondItem="VsW-Ta-Lbn" secondAttribute="trailing" id="ndK-L9-xQe"/>
+                            <constraint firstItem="VsW-Ta-Lbn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oM0-VK-PXV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xae-GV-67U" secondAttribute="trailing" id="qi3-cG-g1F"/>
+                            <constraint firstItem="Xae-GV-67U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="woz-0S-gOG"/>
+                            <constraint firstAttribute="bottom" secondItem="VsW-Ta-Lbn" secondAttribute="bottom" id="zaj-bv-kxL"/>
+                            <constraint firstItem="Xae-GV-67U" firstAttribute="top" secondItem="yne-CA-klN" secondAttribute="bottom" id="zdc-bD-GMJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomButton" destination="2r2-j4-lZy" id="cTD-TS-vuC"/>
+                        <outlet property="middleButton" destination="QeM-FA-cDc" id="P1J-sf-9Wx"/>
+                        <outlet property="questionNumLabel" destination="h1T-om-WPi" id="Rwa-yc-RjJ"/>
+                        <outlet property="questionText" destination="jQI-rD-IJN" id="Aod-2C-B9Q"/>
+                        <outlet property="topButton" destination="B2m-U7-OLZ" id="Z1m-cd-jrP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.76744186046511" y="-27.682403433476395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="888.66668701171875" height="1333.3333740234375"/>
+        <image name="Button" width="640" height="320"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
