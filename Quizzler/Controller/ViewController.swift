@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomButton: UIButton!
     
     var questionNumber = 0
-    let totalQuestions = quizArray.count
+    let totalQuestions = questions.count
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
 
-        if sender.currentTitle! == quizArray[questionNumber].correctAnswer { // checking answer
+        if sender.currentTitle! == questions[questionNumber].correctAnswer { // checking answer
             questionText.text = "CORRECT!"
         } else {
             questionText.text = "WRONG!"
@@ -44,10 +44,10 @@ class ViewController: UIViewController {
     
     func updateUI(qNum: Int) {
         questionNumLabel.text = String("\(qNum + 1) / \(totalQuestions)")
-        questionText.text = quizArray[qNum].question
-        topButton.setTitle(quizArray[qNum].answer1, for: .normal)
-        middleButton.setTitle(quizArray[qNum].answer2, for: .normal)
-        bottomButton.setTitle(quizArray[qNum].answer3, for: .normal)
+        questionText.text = questions[qNum].question
+        topButton.setTitle(questions[qNum].answers[0], for: .normal)
+        middleButton.setTitle(questions[qNum].answers[1], for: .normal)
+        bottomButton.setTitle(questions[qNum].answers[2], for: .normal)
         
     }
 }

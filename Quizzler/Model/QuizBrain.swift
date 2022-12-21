@@ -9,15 +9,25 @@ import Foundation
 
 struct QuizBrain {
     let question: String
-    let answer1: String
-    let answer2: String
-    let answer3: String
+    let answers: [String]
     let correctAnswer: String
+    
+    init(q: String, a: [String], ca: String) {
+        question = q
+        answers = a
+        correctAnswer = ca
+    }
 }
 
-let quizArray = [QuizBrain(question: "QW-1", answer1: "a1", answer2: "a2", answer3: "a3", correctAnswer: "a3"),
-                 QuizBrain(question: "QW-2", answer1: "a11", answer2: "a22", answer3: "a33", correctAnswer: "a33"),
-                 QuizBrain(question: "QW-3", answer1: "a111", answer2: "a222", answer3: "a333", correctAnswer: "a333"),
-                 QuizBrain(question: "QW-4", answer1: "a1111", answer2: "a2222", answer3: "a3333", correctAnswer: "a3333"),
-                 QuizBrain(question: "QW-5", answer1: "a11111", answer2: "a22222", answer3: "a33333", correctAnswer: "a33333"),
+let questions = [
+    QuizBrain(q: "Which is the largest organ in the human body?", a: ["Heart", "Skin", "Large Intestine"], ca: "Skin"),
+    QuizBrain(q: "Five dollars is worth how many nickels?", a: ["25", "50", "100"], ca: "100"),
+    QuizBrain(q: "What do the letters in the GMT time zone stand for?", a: ["Global Meridian Time", "Greenwich Mean Time", "General Median Time"], ca: "Greenwich Mean Time"),
+    QuizBrain(q: "What is the French word for 'hat'?", a: ["Chapeau", "Écharpe", "Bonnet"], ca: "Chapeau"),
+    QuizBrain(q: "In past times, what would a gentleman keep in his fob pocket?", a: ["Notebook", "Handkerchief", "Watch"], ca: "Watch"),
+    QuizBrain(q: "How would one say goodbye in Spanish?", a: ["Au Revoir", "Adiós", "Salir"], ca: "Adiós"),
+    QuizBrain(q: "Which of these colours is NOT featured in the logo for Google?", a: ["Green", "Orange", "Blue"], ca: "Orange"),
+    QuizBrain(q: "What alcoholic drink is made from molasses?", a: ["Rum", "Whisky", "Gin"], ca: "Rum"),
+    QuizBrain(q: "What type of animal was Harambe?", a: ["Panda", "Gorilla", "Crocodile"], ca: "Gorilla"),
+    QuizBrain(q: "Where is Tasmania located?", a: ["Indonesia", "Australia", "Scotland"], ca: "Australia")
 ]
