@@ -21,10 +21,10 @@ class ResultViewController: UIViewController {
     }
     
     func messageColor(dependsOf correctAnswers: Int, and totalQuestions: Int) -> UIColor {
-        let x = totalQuestions / 4
+        let x = totalQuestions / 3
         if correctAnswers <= x {
             return .systemRed
-        } else if correctAnswers >= (x * 3) {
+        } else if correctAnswers >= (x * 2) {
             return .systemGreen
         } else {
             return .systemYellow

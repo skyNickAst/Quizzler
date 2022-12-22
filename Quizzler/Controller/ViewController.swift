@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-
+        enableButtons(state: false)
         if sender.currentTitle! == questions[questionNumber].correctAnswer { // checking answer
             questionText.text = "CORRECT!"
             correctAnswers += 1
@@ -33,17 +33,24 @@ class ViewController: UIViewController {
             questionText.text = "WRONG!"
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Looping Quiz
-            self.questionNumber += 1
-            if self.questionNumber < self.totalQuestions  {
-                self.updateUI(qNum: self.questionNumber)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in // Looping Quiz
+            questionNumber += 1
+            enableButtons(state: true)
+            if questionNumber < totalQuestions  {
+                updateUI(qNum: questionNumber)
             } else {
-                self.performSegue(withIdentifier: "ResultScreen", sender: self)
-                self.questionNumber = 0
-                self.correctAnswers = 0
-                self.updateUI(qNum: self.questionNumber)
+                performSegue(withIdentifier: "ResultScreen", sender: self)
+                questionNumber = 0
+                correctAnswers = 0
+                updateUI(qNum: questionNumber)
             }
         }
+    }
+    
+    func enableButtons(state: Bool) {
+        topButton.isEnabled = state
+        middleButton.isEnabled = state
+        bottomButton.isEnabled = state
     }
     
     func updateUI(qNum: Int) {
